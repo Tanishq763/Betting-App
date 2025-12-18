@@ -1,0 +1,65 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team Betting Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SETTINGS -->
+<div class="container" id="settings">
+    <h1>🧠 Team Betting Quiz</h1>
+
+    <label>Time per question (seconds)</label>
+    <input type="number" id="timeInput" value="10" min="5">
+
+    <label>Number of questions</label>
+    <input type="number" id="countInput" value="3" min="1">
+
+    <button class="start-btn" onclick="startQuiz()">Start Quiz</button>
+</div>
+
+<!-- QUIZ -->
+<div class="container hidden" id="quiz">
+
+    <!-- SCOREBOARD -->
+    <div class="scoreboard">
+        <div class="team">
+            <h3>Team A</h3>
+            <span id="teamAScore">0</span>
+        </div>
+        <div class="team">
+            <h3>Team B</h3>
+            <span id="teamBScore">0</span>
+        </div>
+    </div>
+
+    <!-- BETS -->
+    <div class="bet-panel">
+        <div class="bet">
+            <label>Team A Bet</label>
+            <input type="number" id="betA" min="0">
+        </div>
+        <div class="bet">
+            <label>Team B Bet</label>
+            <input type="number" id="betB" min="0">
+        </div>
+    </div>
+
+    <h2 id="question">Enter bets to start</h2>
+
+    <div id="options" class="options"></div>
+
+    <div class="footer">
+        <span id="timer">⏱ Waiting…</span>
+        <button class="restart-btn" onclick="restartQuiz()">Restart</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
